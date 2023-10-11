@@ -11,7 +11,7 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
 Load data Local INPATH '/root/zipcodes.csv' INTO TABLE zipcodes;
 
 -- GET Data from table
-INSERT OVERWRITE DIRECTORY 'hdfs:///user/anvita/hiveoutput'
+INSERT OVERWRITE DIRECTORY 'hdfs:///user/indrakshi/hiveoutput'
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 select * from zipcodes where state='PR';
 
